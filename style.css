@@ -1,0 +1,503 @@
+@font-face {
+  font-family: "Glitz";
+  src: url("fonts/Glitz.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-display: "Glitz", sans-serif;
+  --font-ui: "Bricolage Grotesque", sans-serif;
+}
+
+.navbar,
+.logo,
+.hero h1,
+.hero-button,
+.portfolio-section h2,
+.project-hero h1 {
+  font-family: var(--font-display);
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: var(--font-ui);
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease; /* adjust duration as desired */
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+.subtitle {
+  font-family: var(--font-ui);
+  font-weight: 300;
+}
+
+.overlay {
+  font-family: var(--font-ui);
+  font-weight: 500;
+}
+
+.project-credits,
+.footer-content {
+  font-family: var(--font-ui);
+  font-weight: 300;
+}
+
+/* BODY */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAV */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: black;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #94ADFA;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 0px;
+  background: #94ADFA;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar .logo {
+  font-size: 3.0rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav-links {
+  margin-left: auto; /* THIS pushes links to the right */
+  display: flex;
+  gap: 28px;
+}
+
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(file:///Users/larry/Desktop/Business/larry-portfolio/images/IMG_6892.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.hero h1 {
+  font-size: 6.0rem;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center; /* center the group */
+  position: relative;
+  gap: 80px;              /* spacing between buttons */
+  width: max-content;      /* shrink-wrap to buttons’ combined width */
+  margin: 0 auto 0 130px;         /* center the wrapper in hero */
+}
+
+.hero-button {
+  padding: 14px 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #4c7dc4;
+  border-color: #4c7dc4;
+  opacity: 0.9
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) translateZ(0) scale(1.1);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.50);
+  z-index: 0;
+  blur(5px)
+}
+
+/* SECTIONS */
+.portfolio-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+.portfolio-section h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  width:95%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  place-self: center;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: blur(1px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* 70% black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  color: white;
+  font-size: 1.4rem; /* larger */
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  text-align: center;
+  opacity: 1;
+  margin-top: 6px;      /* pulls it closer to the heading */
+  margin-bottom: 15px;  /* slightly tighter before gallery */
+  font-weight: 400;
+}
+
+.gallery-grid {
+  margin-bottom: 50px;
+}
+
+h2 {
+  scroll-margin-top: 90px; /* height of sticky nav */
+}
+
+/* KEY ART GALLERY — OVERRIDE SQUARE CROPPING */
+/* KEY ART GALLERY — TRUE ASPECT RATIO + ROW CENTERING */
+
+.keyart-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  justify-items: center;  /* horizontal centering */
+  align-items: center;    /* vertical centering PER ROW */
+}
+
+
+/* FOOTER */
+
+.site-footer {
+  position: relative;
+  padding: 40px 20px 40px;
+  margin-top: 30px;
+}
+
+.site-footer::before {
+  content: "";
+  display: block;
+  width: 400px;                        /* set your desired line length */
+  height: 2px;                         /* thickness of the line */
+  background: rgba(255,255,255,0.75);  /* same color as before */
+  margin: 0 auto 20px;                 /* centers the line and adds spacing below */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-email {
+  display: block;
+  margin-bottom: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+  color: #94ADFA;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 30px;
+}
+
+.footer-socials img {
+  width: 36px;
+  height: 36px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+}
+
+/* PROJECT PAGES */
+
+.project-hero {
+  padding: 0px 20px 0px;
+  text-align: center;
+}
+
+.project-hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.project-credits {
+  font-size: 1.2rem;
+  opacity: 1.0;
+  text-align: center;
+  font-weight: 300;
+}
+
+.project-credits p {
+  margin: 4px 0;
+}
+
+.project-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.project-gallery img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.project-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* KEY ART GALLERY — TRUE ASPECT RATIO + ROW CENTERING */
+
+.keyart-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  justify-items: center;  /* horizontal centering */
+  align-items: center;    /* vertical centering PER ROW */
+}
+
+.keyart-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 20px;
+}
+
+.lightbox-arrow.left {
+  left: 30px;
+}
+
+.lightbox-arrow.right {
+  right: 30px;
+}
+
+.single-project {
+  text-align: center;
+}
+
+.single-project-image {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 50px;
+  display: block;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.project-button:hover {
+  background: #4c7dc4;
+  border-color: #4c7dc4;
+  opacity: 0.9;
+}
+
+.project-button-wrap {
+  text-align: center;
+  margin-top: 50px;
