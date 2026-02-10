@@ -511,15 +511,16 @@ h2 {
   .footer-copyright { font-size: 1rem; }
 
   /* Galleries */
- body .gallery-grid,
- body .project-gallery,
- body .keyart-gallery {
+  body .gallery-grid,
+  body .project-gallery,
+  body .keyart-gallery {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
 
-/* HERO */
-    .hero h1 {
+  /* HERO */
+  .hero h1,
+  .project-hero h1 {
     font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 20px;
   }
@@ -533,12 +534,6 @@ h2 {
   .hero-button {
     padding: 12px 36px;
     font-size: 1.2rem;
-  }
-}
-
-  .project-hero {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    margin-bottom: 20px;
   }
 
   /* Nav */
@@ -560,9 +555,9 @@ h2 {
     width: 34px;
     height: 28px;
   }
-}
+
+} /* End @media max-width: 768px */
 
 @media (min-width: 769px) {
   .hamburger { display: none; }
 }
-
