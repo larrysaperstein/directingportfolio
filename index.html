@@ -207,15 +207,16 @@
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 
-  // toggle menu on click
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open'); // triggers "X" animation
   });
 
-  // optional: allow Enter key for accessibility
+  // keyboard accessibility
   hamburger.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
     }
   });
 </script>
