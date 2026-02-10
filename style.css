@@ -556,6 +556,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between; /* logo left, hamburger right */
+  padding: 18px 20px;
 }
 
 .navbar .logo {
@@ -568,7 +569,7 @@ h2 {
   position: absolute;
   top: 60px;
   right: 20px;
-  width: 150px;
+  width: 160px; /* slightly wider */
   background: black;
   gap: 12px;
   padding: 10px;
@@ -589,15 +590,16 @@ h2 {
   display: flex; 
   flex-direction: column;
   justify-content: space-between;
-  width: 28px; /* slightly smaller width */
-  height: 20px; /* slightly smaller height */
+  width: 28px;   /* slightly smaller */
+  height: 20px;  /* slightly smaller */
   cursor: pointer;
   z-index: 1001; /* above nav-links */
+  margin-left: auto; /* ensures right alignment */
 }
 
 .hamburger span {
   display: block;
-  height: 3px; /* thinner lines */
+  height: 2px;      /* thinner lines */
   width: 100%;
   background: white;
   border-radius: 1px;
@@ -606,7 +608,7 @@ h2 {
 
 /* HAMBURGER "X" ANIMATION */
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -614,7 +616,7 @@ h2 {
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(3px, -3px);
 }
 
 } /* End @media max-width: 768px */
