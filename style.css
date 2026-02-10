@@ -590,25 +590,26 @@ h2 {
   display: flex; 
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;   /* slightly smaller */
-  height: 20px;  /* slightly smaller */
+  width: 28px;   
+  height: 20px;  
   cursor: pointer;
-  z-index: 1001; /* above nav-links */
-  margin-left: auto; /* ensures right alignment */
+  z-index: 1001; 
+  margin-left: auto; 
 }
 
 .hamburger span {
   display: block;
-  height: 2px;      /* thinner lines */
+  height: 2px;      
   width: 100%;
   background: white;
   border-radius: 1px;
-  transition: all 0.3s ease; /* smooth animation */
+  transition: all 0.3s ease; 
+  transform-origin: center; /* important for a centered X */
 }
 
 /* HAMBURGER "X" ANIMATION */
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(3px, 3px);
+  transform: rotate(45deg) translate(0, 6px);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -616,7 +617,7 @@ h2 {
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(3px, -3px);
+  transform: rotate(-45deg) translate(0, -6px);
 }
 
 } /* End @media max-width: 768px */
