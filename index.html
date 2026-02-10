@@ -203,6 +203,22 @@
   </div>
 </footer>
 
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  // toggle menu on click
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // optional: allow Enter key for accessibility
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      navLinks.classList.toggle('open');
+    }
+  });
+</script>
 
 </body>
 </html>
