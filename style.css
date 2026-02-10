@@ -610,7 +610,7 @@ h2 {
 
 /* HAMBURGER "X" ANIMATION - FIXED */
 .hamburger.open span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -618,7 +618,7 @@ h2 {
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
   
 } /* End @media max-width: 768px */
