@@ -510,9 +510,9 @@ h2 {
   .footer-copyright { font-size: 1rem; }
 
   /* Galleries */
-  .gallery-grid,
-  .project-gallery,
-  .keyart-gallery {
+ body .gallery-grid,
+ body .project-gallery,
+ body .keyart-gallery {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
