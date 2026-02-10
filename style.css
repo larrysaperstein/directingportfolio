@@ -501,3 +501,32 @@ h2 {
 .project-button-wrap {
   text-align: center;
   margin-top: 50px;
+
+/* MOBILE OPTIMIZATION */ 
+  
+@media (max-width: 700px) {
+  .site-footer { padding: 30px 6px 30px; }
+  .footer-email { font-size: 1.1rem; }
+  .footer-socials img { width: 30px; height: 30px; }
+  .footer-copyright { font-size: 1rem; }
+}
+
+@media (max-width: 700px) {
+  .gallery-grid,
+  .project-gallery,
+  .keyart-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links { display: none; flex-direction: column; background: black; position: absolute; top: 60px; right: 20px; width: 150px; }
+  .nav-links.open { display: flex; }
+  .hamburger { display: block; cursor: pointer; width: 34px; height: 28px; flex-direction: column; justify-content: space-between; }
+  .hamburger span { display: block; height: 4px; background: white; margin: 4px 0; }
+}
+  
+@media (min-width: 701px) {
+  .hamburger { display: none; }
+}
+
