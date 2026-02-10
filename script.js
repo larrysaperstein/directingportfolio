@@ -107,9 +107,23 @@ window.addEventListener('DOMContentLoaded', () => {
   }, 50);
 });
 
-// Hamburger Mobile
+// HAMBURGER MENU
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+
+if (hamburger && navLinks) {
+  // Click toggle
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open'); // triggers X animation
+  });
+
+  // Keyboard accessibility
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    }
+  });
+}
+
