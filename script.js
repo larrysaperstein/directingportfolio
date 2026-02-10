@@ -106,3 +106,10 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = 1;     // fade in
   }, 50);
 });
+
+// Hamburger Mobile
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
