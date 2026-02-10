@@ -571,6 +571,10 @@ h2 {
     height: 28px;
   }
 
+  .navbar .logo {
+  font-size: 2rem; /* smaller on mobile */
+}
+
 } /* End @media max-width: 768px */
 
 @media (min-width: 769px) {
