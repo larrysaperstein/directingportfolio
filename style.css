@@ -524,10 +524,14 @@ h2 {
     font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 20px;
   }
-
+  
+  .hero {
+    min-height: 50vh;
+  }
+  
   .hero-buttons {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     margin: 0 auto;
   }
 
