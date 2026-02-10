@@ -518,6 +518,29 @@ h2 {
     width: 100%;
   }
 
+/* HERO */
+    .hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .hero-button {
+    padding: 12px 36px;
+    font-size: 1.2rem;
+  }
+}
+
+  .project-hero {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 20px;
+  }
+
   /* Nav */
   .nav-links {
     display: none;
