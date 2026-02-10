@@ -587,14 +587,15 @@ h2 {
 
 /* HAMBURGER */
 .hamburger {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 28px;   
-  height: 20px;  
+  justify-content: center; /* center lines vertically */
+  gap: 6px; /* spacing between lines */
+  width: 28px;
+  height: 20px;
   cursor: pointer;
-  z-index: 1001; 
-  margin-left: auto; 
+  z-index: 1001;
+  margin-left: auto;
 }
 
 .hamburger span {
