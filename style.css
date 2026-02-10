@@ -518,6 +518,16 @@ h2 {
     width: 100%;
   }
 
+  .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-section h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 12px;
+}
+
   /* HERO */
   .hero h1,
   .project-hero h1 {
@@ -532,7 +542,7 @@ h2 {
   
   .hero-buttons {
     flex-direction: column;
-    gap: 40px !important;
+    gap: 30px !important;
     margin: 0 auto;
   }
 
