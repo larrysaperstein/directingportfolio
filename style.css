@@ -565,11 +565,21 @@ h2 {
   .nav-links.open { display: flex; }
 
   .hamburger {
-    display: block;
-    cursor: pointer;
-    width: 34px;
-    height: 28px;
-  }
+  display: flex; /* must be flex for vertical stacking */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34px;
+  height: 28px;
+  cursor: pointer;
+  z-index: 1001; /* ensure it’s above nav-links */
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+}
 
   .navbar .logo {
   font-size: 2rem; /* smaller on mobile */
