@@ -551,43 +551,70 @@ h2 {
     font-size: 1.2rem;
   }
 
-  /* Nav */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 150px;
-    background: black;
-    gap: 12px;
-    padding: 10px;
-    z-index: 1000;
-  }
+/* NAV - MOBILE */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, hamburger right */
+}
 
-  .nav-links.open {
-    display: flex;
-  }
+.navbar .logo {
+  font-size: 2rem; /* smaller on mobile */
+}
 
-  .hamburger {
-  display: flex; /* must be flex for vertical stacking */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 150px;
+  background: black;
+  gap: 12px;
+  padding: 10px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.nav-links.open {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: flex; 
   flex-direction: column;
   justify-content: space-between;
-  width: 34px;
-  height: 28px;
+  width: 28px; /* slightly smaller width */
+  height: 20px; /* slightly smaller height */
   cursor: pointer;
-  z-index: 1001; /* ensure it’s above nav-links */
+  z-index: 1001; /* above nav-links */
 }
 
 .hamburger span {
   display: block;
-  height: 4px;
+  height: 3px; /* thinner lines */
   width: 100%;
   background: white;
+  border-radius: 1px;
+  transition: all 0.3s ease; /* smooth animation */
 }
 
-  .navbar .logo {
-  font-size: 2rem; /* smaller on mobile */
+/* HAMBURGER "X" ANIMATION */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 } /* End @media max-width: 768px */
