@@ -526,13 +526,13 @@ h2 {
   }
   
   .hero {
-    min-height: 50vh !important;
+    min-height: 60vh !important;
     background-attachment: scroll; /* prevents mobile stretching */
   }
   
   .hero-buttons {
     flex-direction: column;
-    gap: 50px !important;
+    gap: 40px !important;
     margin: 0 auto;
   }
 
