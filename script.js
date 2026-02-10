@@ -12,8 +12,7 @@ images.forEach((img, index) => {
   img.addEventListener('click', () => {
     currentIndex = index;
 
-    const lightbox = document.body.appendChild(lightbox);
-    document.body.style.overflow = 'hidden';
+    const lightbox = document.createElement('div')
     lightbox.className = 'lightbox';
 
     const fullImg = document.createElement('img');
@@ -52,7 +51,6 @@ setTimeout(() => {
     }
 
     function closeLightbox() {
-      document.body.style.overflow = '';
       document.removeEventListener('keydown', handleKey);
       lightbox.remove();
     }
