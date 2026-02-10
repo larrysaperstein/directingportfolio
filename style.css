@@ -555,14 +555,19 @@ h2 {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: black;
     position: absolute;
     top: 60px;
     right: 20px;
     width: 150px;
+    background: black;
+    gap: 12px;
+    padding: 10px;
+    z-index: 1000;
   }
 
-  .nav-links.open { display: flex; }
+  .nav-links.open {
+    display: flex;
+  }
 
   .hamburger {
   display: flex; /* must be flex for vertical stacking */
