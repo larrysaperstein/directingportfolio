@@ -15,7 +15,8 @@
 .hero h1,
 .hero-button,
 .portfolio-section h2,
-.project-hero h1 {
+.project-hero h1
+.project-hero-alt h1 {
   font-family: var(--font-display);
   font-weight: normal;
 }
@@ -372,6 +373,18 @@ h2 {
   margin-bottom: 10px;
 }
 
+.project-hero-alt {
+  padding: 40px 20px 0px;
+  text-align: center;
+  margin-bottom: -30px;
+}
+
+.project-hero-alt h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  margin-bottom: 5vh;
+}
+
 .project-credits {
   font-size: 1.2rem;
   opacity: 1.0;
@@ -413,81 +426,62 @@ h2 {
   aspect-ratio: 16 / 9;
 }
 
-/* WEBSITE PRODUCT PAGE */
-
-.faq-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 0px;
+.iconbox-section {
+  max-width: 1000px;
+  margin: 30px auto 0;
+  padding: 0 6vw;
 }
 
-.faq-section h2 {
-  font-size: 5rem;
-  font-weight: 400;
+.iconbox-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0px;
+  padding: 36px 28px;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease;
+}
+
+.iconbox-card:hover {
+  border-color: rgba(148, 173, 250, 0.5);
+}
+
+.iconbox-section h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: 0.04em;
 }
 
-.faq {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 0 6vw;
+.iconbox {
+  font-size: 1.3rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
 }
 
-.faq-item {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 1.25rem 0;
+.iconboxflex {
+  margin-top: -30px;
 }
 
-.faq-item:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+.iconbox img {
+  width: 200px;
+  border-radius: 999px;
 }
 
-.faq-item summary {
-  cursor: pointer;
-  font-size: 1.15rem;
-  font-weight: 500;
-  list-style: none;
-}
-
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::after {
-  content: "+";
-  float: right;
-  opacity: 0.7;
-}
-
-.faq-item[open] summary::after {
-  content: "−";
-}
-
-.faq-item p {
-  margin: 1rem 0 0 1rem;
-  line-height: 1.8;
-  font-weight: 200;
-}
-
-.faq-item a{
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.faq-item a:hover {
-  color: #94ADFA;
-}
+/* WEBSITE PRODUCT PAGE */
 
 .subtitle-alt{
   font-size: 1.8rem;
   text-align: center;
   opacity: 1;
-  margin-top: 6px;      /* pulls it closer to the heading */
-  margin-bottom: 15px;  /* slightly tighter before gallery */
-  font-weight: 400;
+  margin: -30px auto;
+  font-weight: 300;
 }
 
 .website-copy {
@@ -554,7 +548,7 @@ h2 {
 /* PRICING SECTION */
 .pricing-section {
   max-width: 1400px;
-  margin: 80px auto;
+  margin: 80px auto 50px;
   padding: 0 6vw;
 }
 
@@ -681,6 +675,73 @@ h2 {
   .pricing-card h3 {
     font-size: 2rem;
   }
+}
+
+.faq-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+.faq-section h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.faq {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.25rem 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 400;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  opacity: 0.7;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  margin: 1rem 0 0 1rem;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.8;
+  font-weight: 100;
+}
+
+.faq-item a{
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.faq-item a:hover {
+  color: #94ADFA;
 }
 
 
@@ -902,6 +963,15 @@ h2 {
 
 .hamburger.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.iconbox{
+  flex-direction: column;
+  text-align: center;
+}
+
+.iconbox img {
+  scale: 0.8;
 }
   
 } /* End @media max-width: 768px */
