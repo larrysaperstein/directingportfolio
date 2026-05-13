@@ -509,18 +509,6 @@ h2 {
   margin-top: 2.5rem;
 }
 
-.feature-list {
-  margin: -0.5em 0 1.5em 2.5em; 
-  padding: 0;
-  line-height: 1.5;            
-  font-size: 1rem;
-  font-weight: 200;
-}
-
-.feature-list li {
-  margin-bottom: 0.35em;
-}
-
 .project-button-alt {
   display: inline-block;
   padding: 14px 36px;
@@ -677,6 +665,8 @@ h2 {
   }
 }
 
+/* FAQ SECTION */
+
 .faq-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -742,6 +732,18 @@ h2 {
 
 .faq-item a:hover {
   color: #94ADFA;
+}
+
+.feature-list {
+  margin: -0.5em 0 1.5em 2.5em; 
+  padding: 0;
+  line-height: 1.5;            
+  font-size: clamp(1.05rem, 3vw, 1.40rem);
+  font-weight: 200;
+}
+
+.feature-list li {
+  margin-bottom: 0.35em;
 }
 
 
