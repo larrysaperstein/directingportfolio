@@ -1,9 +1,14 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/:slug",
-      "destination": "/projects/:slug.html"
-    }
+    { "source": "/websites", "destination": "/projects/websites" },
+    { "source": "/dancespace", "destination": "/projects/dancespace" },
+    { "source": "/editing", "destination": "/projects/editing" },
+    { "source": "/ltat", "destination": "/projects/ltat" },
+    { "source": "/mackandmabel", "destination": "/projects/mack-and-mabel" },
+    { "source": "/mortem", "destination": "/projects/mortem" },
+    { "source": "/peter", "destination": "/projects/peter" },
+    { "source": "/oneformybaby", "destination": "/projects/one-for-my-baby" },
+    { "source": "/keyart", "destination": "/projects/key-art" }
   ]
 }
