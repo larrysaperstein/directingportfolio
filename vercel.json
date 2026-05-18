@@ -1,14 +1,14 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/websites", "destination": "/projects/websites" },
-    { "source": "/dancespace", "destination": "/projects/dancespace" },
-    { "source": "/editing", "destination": "/projects/editing" },
-    { "source": "/ltat", "destination": "/projects/ltat" },
-    { "source": "/mackandmabel", "destination": "/projects/mack-and-mabel" },
-    { "source": "/mortem", "destination": "/projects/mortem" },
-    { "source": "/peter", "destination": "/projects/peter" },
-    { "source": "/oneformybaby", "destination": "/projects/one-formy-baby" },
-    { "source": "/keyart", "destination": "/projects/key-art" }
+    { "source": "/projects/websites.html", "destination": "/websites" },
+    { "source": "/projects/dancespace.html", "destination": "/dancespace" },
+    { "source": "/projects/editing.html", "destination": "/editing" },
+    { "source": "/projects/ltat.html", "destination": "/ltat" },
+    { "source": "/projects/mack-and-mabel.html", "destination": "/mackandmabel" },
+    { "source": "/projects/mortem.html", "destination": "/postmortem" },
+    { "source": "/projects/peter.html", "destination": "/peter" },
+    { "source": "/projects/one-for-my-baby.html", "destination": "/oneformybaby" },
+    { "source": "/projects/key-art.html", "destination": "/keyart" }
   ]
 }
