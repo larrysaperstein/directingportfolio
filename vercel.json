@@ -1,14 +1,14 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/websites", "destination": "/projects/websites.html" },
-    { "source": "/dancespace", "destination": "/projects/dancespace.html" },
-    { "source": "/editing", "destination": "/projects/editing.html" },
-    { "source": "/ltat", "destination": "/projects/ltat.html" },
-    { "source": "/mackandmabel", "destination": "/projects/mack-and-mabel.html" },
-    { "source": "/mortem", "destination": "/projects/mortem.html" },
-    { "source": "/peter", "destination": "/projects/peter.html" },
-    { "source": "/oneformybaby", "destination": "/projects/one-formy-baby.html" },
-    { "source": "/keyart", "destination": "/projects/key-art.html" }
+    { "source": "/websites", "destination": "/projects/websites" },
+    { "source": "/dancespace", "destination": "/projects/dancespace" },
+    { "source": "/editing", "destination": "/projects/editing" },
+    { "source": "/ltat", "destination": "/projects/ltat" },
+    { "source": "/mackandmabel", "destination": "/projects/mack-and-mabel" },
+    { "source": "/mortem", "destination": "/projects/mortem" },
+    { "source": "/peter", "destination": "/projects/peter" },
+    { "source": "/oneformybaby", "destination": "/projects/one-formy-baby" },
+    { "source": "/keyart", "destination": "/projects/key-art" }
   ]
 }
