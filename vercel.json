@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/contact", "destination": "/contact.html" },
     { "source": "/websites", "destination": "/projects/websites" },
     { "source": "/dancespace", "destination": "/projects/dancespace" },
     { "source": "/editing", "destination": "/projects/editing" },
